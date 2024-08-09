@@ -1,10 +1,31 @@
+import { useState } from 'react';
+import Another from './Another';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function decrement() {
+    setCount(prevCount => prevCount - 1);
+  }
+
+  function increment() {
+    setCount(prevCount => prevCount + 1)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
+
+      <Another name="Dan Louie"/>
+
+      <div>
+        <span>{count}</span>
+        <button onClick={decrement}>-</button>
+        <button onClick={increment}>+</button>
+      </div>
+
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
