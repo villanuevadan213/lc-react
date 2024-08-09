@@ -3,7 +3,9 @@ import React from 'react'
 export default function Another( props ) {
   return (
     <div>
-      Another Component, { props.name }
+      Introduction of ReactJS 
+      by
+      { props.name }
     </div>
   )
 }
